@@ -17,6 +17,8 @@ This block is used to separate conditional pages that will be printed on separat
 
 ## Download
 
+* UNPKG
+  * `https://unpkg.com/grapesjs-page-break`
 * NPM
   * `npm i grapesjs-page-break`
 * GIT
