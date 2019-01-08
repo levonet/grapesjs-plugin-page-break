@@ -1,0 +1,44 @@
+{
+  "name": "grapesjs-page-break",
+  "version": "0.1.0",
+  "description": "GrapesJS component for printing page-break",
+  "main": "dist/grapesjs-page-break.min.js",
+  "scripts": {
+    "lint": "eslint src",
+    "v:patch": "npm version --no-git-tag-version patch",
+    "build": "npm run v:patch && webpack --env.production",
+    "start": "webpack-dev-server --open --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/levonet/grapesjs-plugin-page-break.git"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "page-break",
+    "wysiwyg"
+  ],
+  "author": "Pavlo Bashynskyi",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      "@babel/transform-runtime"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.12"
+  }
+}
