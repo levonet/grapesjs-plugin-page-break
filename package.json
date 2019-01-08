@@ -1,7 +1,7 @@
 {
   "name": "grapesjs-page-break",
   "version": "0.1.0",
-  "description": "GrapesJS component for printing page-break",
+  "description": "GrapesJS component for making page-break",
   "main": "dist/grapesjs-page-break.min.js",
   "scripts": {
     "lint": "eslint src",
@@ -40,5 +40,8 @@
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.12"
+  },
+  "dependencies": {
+    "grapesjs": "^0.14.50"
   }
 }

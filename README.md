@@ -1,16 +1,10 @@
-# GrapesJS Page-Break
+# GrapesJS Page-Break Block
 
-
-<span><a href="https://david-dm.org/artf/grapesjs-plugin-boilerplate#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/artf/grapesjs-plugin-boilerplate.svg" alt="Dev Dependency Status" /></a></span>
-
-This boilerplate helps you quickly start a production ready plugin for GrapesJS. If you don't know from where to start, check this guide [Creating plugins](https://grapesjs.com/docs/modules/Plugins.html). Sections below are also used as boilerplate for your README, follow these steps below
-
+This block is used to separate conditional pages that will be printed on separate sheets.
 
 ## Summary
 
-* Plugin name: `grapesjs-plugin-page-break`
-* Components
-  * `page-break`
+* Plugin name: `grapesjs-page-break`
 * Blocks
   * `page-break`
 
@@ -19,16 +13,14 @@ This boilerplate helps you quickly start a production ready plugin for GrapesJS.
 |Option|Description|Default|
 |-|-|-
 |`blockLabel`|Label of the page-break block|`Page-Break`|
-
+|`blockPageBreak`|Object to extend the default page-break block|`{}`|
 
 ## Download
 
-* CDN
-  * `https://unpkg.com/YOUR-PLUGIN-NAME`
 * NPM
-  * `npm i YOUR-PLUGIN-NAME`
+  * `npm i grapesjs-page-break`
 * GIT
-  * `git clone https://github.com/YOUR-NAME/YOUR-PLUGIN-NAME.git`
+  * `git clone https://github.com/levonet/grapesjs-plugin-page-break.git`
 
 ## Usage
 
@@ -36,7 +28,7 @@ Directly in the browser
 ```html
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/grapesjs"></script>
-<script src="path/to/YOUR-PLUGIN-NAME.min.js"></script>
+<script src="path/to/grapesjs-page-break.min.js"></script>
 
 <div id="gjs"></div>
 
@@ -44,9 +36,9 @@ Directly in the browser
   var editor = grapesjs.init({
       container : '#gjs',
       // ...
-      plugins: ['YOUR-PLUGIN-NAME'],
+      plugins: ['grapesjs-page-break'],
       pluginsOpts: {
-        'YOUR-PLUGIN-NAME': { /* options */ }
+        'grapesjs-page-break': { /* options */ }
       }
   });
 </script>
@@ -55,33 +47,25 @@ Directly in the browser
 Modern javascript
 ```js
 import grapesjs from 'grapesjs';
-import yourPluginName from 'YOUR-PLUGIN-NAME';
+import yourPluginName from 'grapesjs-page-break';
 
 const editor = grapesjs.init({
   container : '#gjs',
   // ...
-  plugins: [yourPluginName],
+  plugins: ['grapesjs-page-break'],
   pluginsOpts: {
-    [yourPluginName]: { /* options */ }
+    ['grapesjs-page-break']: { /* options */ }
   }
-  // or
-  plugins: [
-    editor => yourPluginName(editor, { /* options */ }),
-  ],
 });
 ```
-
-
-
-
 
 ## Development
 
 Clone the repository
 
 ```sh
-$ git clone https://github.com/YOUR-NAME/YOUR-PLUGIN-NAME.git
-$ cd YOUR-PLUGIN-NAME
+$ git clone https://github.com/levonet/grapesjs-plugin-page-break.git.git
+$ cd grapesjs-plugin-page-break
 ```
 
 Install dependencies
@@ -96,10 +80,6 @@ Start the dev server
 $ npm start
 ```
 
-
-
-
-
 ## License
 
-BSD 3-Clause
+MIT

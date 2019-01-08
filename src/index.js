@@ -1,29 +1,18 @@
 import grapesjs from 'grapesjs';
-// import loadCommands from './commands';
-import loadComponents from './components';
 import loadBlocks from './blocks';
 
-page-break
+export default grapesjs.plugins.add('grapesjs-page-break', (editor, opts = {}) => {
+  const options = {
+    // Label of the page-break block
+    blockLabel: 'Page-Break',
 
-export default grapesjs.plugins.add('grapesjs-custom-code', (editor, opts = {}) => {
-  const options = { ...{
-    // Label of the custom code block
-    blockLabel: 'Custom Code',
+    // Object to extend the default page-break block, eg. { label: 'Page Break', category: 'Extra', ... }.
+    // Pass a falsy value to avoid adding the block
+    blockPageBreak: {},
 
-    // Default content of the page-break component
-    blockContent: '<div style="page-break-before: always;"></div>',
-
-  },  ...opts };
-
-  // Add components
-  loadComponents(editor, options);
+    ...opts
+  };
 
   // Add blocks
   loadBlocks(editor, options);
-
-  // // Add commands
-  // loadCommands(editor, options);
-
-  // TODO Remove
-  // editor.on('load', () => editor.addComponents(`<div style="margin:100px; padding:25px;">Content loaded from the plugin</div>`, { at: 0 }))
-};
+});
