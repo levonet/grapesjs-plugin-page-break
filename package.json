@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-page-break",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "GrapesJS component for making page-break",
   "main": "dist/grapesjs-page-break.min.js",
   "scripts": {
