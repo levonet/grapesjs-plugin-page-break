@@ -14,6 +14,7 @@ This block is used to separate conditional pages that will be printed on separat
 |-|-|-
 |`blockLabel`|Label of the page-break block|`Page-Break`|
 |`blockPageBreak`|Object to extend the default page-break block|`{}`|
+|`category`|Category label|`Extra`|
 
 ## Download
 
